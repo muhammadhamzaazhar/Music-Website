@@ -5,7 +5,6 @@ import { Button } from "./ui/moving-border";
 
 const featuredWebinars = [
   {
-    id: 1,
     title: "Understanding Music Theory",
     description:
       "Dive deep into the fundamentals of music theory and enhance your musical skills.",
@@ -13,7 +12,6 @@ const featuredWebinars = [
     isFeatured: true,
   },
   {
-    id: 2,
     title: "The Art of Songwriting",
     description:
       "Learn the craft of songwriting from experienced musicians and songwriters.",
@@ -21,7 +19,6 @@ const featuredWebinars = [
     isFeatured: true,
   },
   {
-    id: 3,
     title: "Mastering Your Instrument",
     description:
       "Advanced techniques to master your musical instrument of choice.",
@@ -29,7 +26,6 @@ const featuredWebinars = [
     isFeatured: true,
   },
   {
-    id: 4,
     title: "Music Production Essentials",
     description:
       "Get started with music production with this comprehensive overview.",
@@ -38,7 +34,6 @@ const featuredWebinars = [
   },
 
   {
-    id: 5,
     title: "Live Performance Techniques",
     description:
       "Enhance your live performance skills with expert tips and strategies.",
@@ -46,7 +41,6 @@ const featuredWebinars = [
     isFeatured: true,
   },
   {
-    id: 6,
     title: "Digital Music Marketing",
     description:
       "Learn how to promote your music effectively in the digital age.",
@@ -69,18 +63,13 @@ const UpcomingWebinars = () => {
         </div>
 
         <div className="mt-10">
-          {featuredWebinars.map((webinar) => (
-            <HoverEffect
-              key={webinar.id}
-              items={[
-                {
-                  title: webinar.title,
-                  description: webinar.description,
-                  link: "/",
-                },
-              ]}
-            />
-          ))}
+          <HoverEffect
+            items={featuredWebinars.map((webinar) => ({
+              title: webinar.title,
+              description: webinar.description,
+              link: webinar.slug,
+            }))}
+          />
         </div>
 
         <div className="mt-10 text-center">
