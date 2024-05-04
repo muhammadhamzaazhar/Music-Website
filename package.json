@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.1.7",
     "mini-svg-data-uri": "^1.4.4",
